@@ -13,18 +13,13 @@ function Player(classType, level, health, mana, strength, agility, speed) {
 }
 
 let PlayerMoves = {
-  calcAttack() {
+   calcAttack() {
     //who attacks first
     let getPlayerSpeed= player.speed;
     let getEnemySpeed= enemy.speed;
-    if (getPlayerSpeed>getEnemySpeed){
-      playerMoves.playerAttack();
-    }
-    //else enemyAttack();
-
-  },
+    
     //player attacks
-    playerAttack(){
+    let playerAttack=function(){
       let calcBaseDmg= player.strength * player.agility / 1000;
       let offsetDmg= Math.floor(Math.random()*Math.floor(10));
       let calcOutputDmg = calcBaseDmg + offsetDmg;     
@@ -32,15 +27,22 @@ let PlayerMoves = {
       let numOfHits= Math.floor(Math.random()*Math.floor(player.agility/20))+1;
       let attackValues= [calcOutputDmg, numOfHits];
       return attackValues;
-    },
+    }
+
     //enemy attacks
-    enemyAttack(){
+    let enemyAttack =function(){
       let calcBaseDmg= enemy.strength * enemy.agility / 1000;
       let offsetDmg= Math.floor(Math.random()*Math.floor(10));
       let calcOutputDmg = calcBaseDmg + offsetDmg;     
 
       let numOfHits= Math.floor(Math.random()*Math.floor(enemy.agility/20))+1;
       let attackValues= [calcOutputDmg, numOfHits];
-      return attackValues;
+      return attackValues;     
     }
+    
+    if (getPlayerSpeed>getEnemySpeed){
+      playerAttack(); }   
+    else enemyAttack();
+  
  }
+}
