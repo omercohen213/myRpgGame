@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Styles.css">
+  <title>Rpg game</title>
+  <script src="js/main.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/enemy.js"></script>
+  <script src=""></script>
+</head>
+
+<body>
+  <div class="header">
+    <h2>Choose your class</h2>
+  </div>
+  <div class="interface">
+    <div>
+      <a href="#" onclick="gameManager.gameStart('Warrior')">
+        <h3>Warrior</h3> 
+        <p>Warriors are strong and have high health points but attack slowly</p>
+      </a>
+      <a href="#" onclick="gameManager.gameStart('Rogue')">
+        <h3>Rogue</h3>
+        <p>Rogues are fast but weak</p>
+      </a>
+      <a href="#" onclick="gameManager.gameStart('Mage')">
+        <h3>Mage</h3>
+        <p>Mages use lots of mana and cast spells</p>
+      </a>
+      <a href="#" onclick="gameManager.gameStart('Hunter')">
+        <h3>Hunter</h3>
+        <p>Hunters attack with ranged weapons</p>
+      </a>
+    </div>
+  </div>
+  <div class="actions"></div>
+  <div class="arena"></div>
+  <div class="enemy"></div>
+</body>
+
+</html>
+
+
+
