@@ -1,3 +1,5 @@
+let enemies = [];
+
 // defend attack dodge
 let gameManager = {
     
@@ -40,7 +42,7 @@ let gameManager = {
        getHeader.innerHTML= '<h1>Task: kill an enemy!</h1>';
        let getActions = document.querySelector(".actions");
        getActions.innerHTML= '<a href="#" class="btn-prefight" onclick="gameManager.setFight()">Search for enemy!</a>';
-       let getArena=document.getElementsByClassName(".arena");
+       //let getArena=document.getElementsByClassName(".arena");
        //getArena.style.visibility= "visable";
 
     },
@@ -48,31 +50,35 @@ let gameManager = {
     setFight:function(){
         //***fix it*** 
         //how to approach enemy name by id (last property)
-        let enemies = [];
-        let getEnemy = document.getElementsByClassName(".enemy");
+        
+        
         
         //Create enemies
-        let enemy00= new Enemy ("Goblin",1,100,0,50,100,50,00);
+        enemy00= new Enemy ("Goblin",1,100,0,50,100,50,00);
         enemies.push(enemy00);
-        let enemy01= new Enemy ("Troll",2,200,0,150,80,100,01);
+        enemy01= new Enemy ("Troll",2,200,0,150,80,100,01);
         enemies.push(enemy01);
-        let enemy02= new Enemy ("Goblin",3,1000,0,500,1000,5000,02);
+        enemy02= new Enemy ("Goblin",3,1000,0,500,1000,5000,02);
         enemies.push(enemy02);
         
-        //randomize an enemy from the array
-        currentEnemy= Math.floor(Math.random()*enemies.length);
-       
-        //writes enemy stats inside the html
-        getEnemy.innerHTML= 
-        '<div><h2>'+enemies[currentEnemy].enemyType+': Level '+enemies[currentEnemy].level+           
-        '</h2><p>Health:'+enemies[currentEnemy].health+
-        '</p><p>Mana:'+enemies[currentEnemy].mana+'</p>'+
-        '</p><p>Strength:'+enemies[currentEnemy].strength+'</p>'+
-        '</p><p>Agility:'+enemies[currentEnemy].agility+'</p>'+
-        '</p><p>Speed:'+enemies[currentEnemy].speed+'</p></div>';
-         
+        let getHeader = document.getElementsByClassName(".hearder");
+        getHeader.innerHTML= '<p>Choose your move!</p>'
         
-    }
+        let getActions = document.querySelector(".actions");
+        getActions.innerHTML= '<a href="#" class="btn-prefight" onclick="PlayerMoves.calcAttack()">Attack</a>';
+      
+        //randomize an enemy from the array
+        enemy= enemies[Math.floor(Math.random()*enemies.length)];
+
+        let getEnemy = document.querySelector(".enemy");
+        getEnemy.innerHTML= 
+        '<div><h2>'+['enemy' + enemy00.id].enemyType+': Level '+enemy.level+           
+        '</h2><p>Health:'+enemy.health+
+        '</p><p>Mana:'+enemy.mana+'</p>'+
+        '</p><p>Strength:'+enemy.strength+'</p>'+
+        '</p><p>Agility:'+enemy.agility+'</p>'+
+        '</p><p>Speed:'+enemy.speed+'</p></div>';    
+      }
   
   }
   
