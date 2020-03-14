@@ -72,7 +72,7 @@ let gameManager = {
 
         let getEnemy = document.querySelector(".enemy");
         getEnemy.innerHTML= 
-        '<div><h2>'+['enemy' + enemy00.id].enemyType+': Level '+enemy.level+           
+        '<div><h2>'+enemy.enemyType+': Level '+enemy.level+           
         '</h2><p>Health:'+enemy.health+
         '</p><p>Mana:'+enemy.mana+'</p>'+
         '</p><p>Strength:'+enemy.strength+'</p>'+
