@@ -3,14 +3,16 @@ img {
     width: 160px;
   }
   
-  /* {
+   *{
+    
     margin: 0;
     padding: 0;
     text-decoration: none;
-  }*/
-  
+  }
+
   body {
     background-color: #1b1b1b;
+    
   }
   
   .header {
@@ -22,18 +24,11 @@ img {
     align-items: center;
     justify-content: center;
   }
-  
-  .header p {
-    font-family: arial;
-    font-size: 18px;
-    color: #fff;
-    padding-bottom: 4px;
-  }
-  
   .header h2 {
     font-family: 'Acme', sans-serif;
     font-size: 30px;
     color: #f8b700;
+    
   }
   
   .interface {
@@ -42,28 +37,20 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #1b1b1b;
-  }
-  
-  .interface a {
-    display: flex;
-    flex-wrap: nowrap;
+    
+
   }
   
   .interface img {
     width: 120px;
     height: 120px;
   }
-  
-  .img-avatar {
-    width: 160px !important;
-    height: 160px !important;
-  }
-  
+   
   .interface div {
-    width: 220px;
-    padding: 0 10px 0 20px;
-    background-color: #211510;
+    width: 200px;
+    padding: 0 10px 10px 20px;
+    /*background-image: url("Images/warrior.jpg");*/
+    /*background-color: #3c1d3d;*/
   }
   
   .interface a:hover div {
@@ -80,7 +67,7 @@ img {
   .interface p {
     font-family: arial;
     font-size: 12px;
-    color: #d5c8af;
+    color: white;
     line-height: 20px;
   }
   

@@ -1,7 +1,6 @@
 let enemy;
 
-class Enemy {
-  constructor(enemyType, level, health, mana, strength, agility, speed, id) {
+function Enemy (enemyType, level, health, mana, strength, agility, speed, element, xpReward) {
     this.enemyType = enemyType;
     this.level = level;
     this.health = health;
@@ -9,7 +8,8 @@ class Enemy {
     this.strength = strength;
     this.agility = agility;
     this.speed = speed;
-    this.id = id;
+    this.element= element;
+    this.xpReward=xpReward;
   }
-}
+
 
