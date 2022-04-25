@@ -1,2 +1,2 @@
 # myRpgGame
-Using Live Server extendtion on Visual Studio Code. (alt+L) to run
+Using Live Server extension on Visual Studio Code. (alt+L) to run
